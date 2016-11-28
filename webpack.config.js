@@ -130,11 +130,19 @@ let webpackConfig = {
 					name: path.join(paths.src.fonts, '[name].[ext]')
 				}
 			},
+			// Add any extension that isn't .js/.css here that you want replace to work
 			{
-				test: /\.js$|\.scss$/,
+				test: /\.html$/,
+				loader: 'raw'
+			},
+			{
+				test: /\.html$|\.js$|\.scss$/,
 				include: [
-					path.join(paths.src.root, paths.src.scripts),
-					path.join(paths.src.root, paths.src.styles)
+					paths.src.root
+				],
+				exclude: [
+					path.join(paths.src.root, paths.src.images),
+					path.join(paths.src.root, paths.src.fonts)
 				],
 				loader: 'string-replace',
 				query: {
