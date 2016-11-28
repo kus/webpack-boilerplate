@@ -1,0 +1,17 @@
+@import 'variables';
+
+body {
+	background: $BLACK;
+	border-radius: 5px;
+	content: "{{envPath}}";
+}
+
+a {
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	display: flex;
+}
+
+:fullscreen a {
+    display: flex
+}
