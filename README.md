@@ -62,6 +62,12 @@ Compiling and saving to disk. Files will be stored in `webroot/` including all a
 npm run build
 ```
 
+Build and rebuild for any changes. Essentially `watch` and write files to disk.
+
+```bash
+npm run build:watch
+```
+
 ### Options
     --dev/qa/uat/prod        Will set the environment and run specific tasks for
                              different environments
